@@ -13,6 +13,8 @@
 /* Секция «Как участвовать» начинается сразу под плашкой перехода */
 .sec-join{padding-top:0}
 .sec-intro{padding-top:56px}
+/* Заголовок-отбивка «С чего все началось» над вводкой */
+.intro-h{margin-bottom:16px}
 
 /* ---------- Как участвовать: три шага ---------- */
 .join{list-style:none;margin:36px 0 0;padding:0;display:flex;gap:24px}
@@ -91,4 +93,18 @@
 .final-go .url{display:block;margin-top:10px;text-align:center}
 @media (max-width:720px){
   .final-go{display:flex;flex-direction:column;text-align:center}
+}
+
+/* ---------- Плавающий QR справа снизу ---------- */
+.fqr{
+  position:fixed;z-index:50;right:20px;bottom:20px;width:128px;padding:10px 10px 8px;border-radius:16px;text-align:center;
+  background:#0f1763;border:1px solid rgba(255,210,122,.45);box-shadow:0 12px 30px rgba(5,11,58,.35);
+  transition:opacity .25s,visibility .25s;
+}
+.fqr img{display:block;width:100px;height:100px;margin:0 auto 6px;background:#fff;border-radius:8px;padding:4px}
+.fqr a{color:#ffd27a;font-size:13px;font-weight:700;text-decoration:none}
+.fqr a:hover{text-decoration:underline}
+.fqr.off{opacity:0;visibility:hidden}               /* класс ставит main.js */
+@media (max-width:700px){
+  .fqr{display:none}
 }

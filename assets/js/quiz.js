@@ -95,7 +95,7 @@
     setText($('qmText'), q.text);
     $('qmImg').src = q.img;
     $('qmImg').alt = q.word;
-    setText($('qmNext'), current < questions.length - 1 ? 'Следующий вопрос' : 'К итогам');
+    setText($('qmNext'), current < questions.length - 1 ? 'Следующий вопрос' : 'Завершить');
 
     dom.addClass(expl, 'on');
     dom.addClass($('qmNext'), 'on');

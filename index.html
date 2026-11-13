@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--
+  Внутренняя страница «Новогодняя ночь длиной в страну» для портала ПСБ.
+  Статичная страница-витрина: рассказывает о проекте и ведет на платформу psbng2027.ru.
+  Структура файлов — в README.md.
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Новогодняя ночь длиной в&nbsp;страну — ПСБ</title>
+<!-- Стили: основа, затем блоки страницы, затем окна поверх страницы -->
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/hero.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/modal.css">
+<link rel="stylesheet" href="assets/css/quiz.css">
+<link rel="stylesheet" href="assets/css/comic.css">
+<link rel="stylesheet" href="assets/css/elka.css">
+</head>
+<body>
+
+<!-- ========== 1. Первый экран ========== -->
+<section class="hero">
+  <picture class="hero-bg">
+    <source srcset="assets/img/hero.webp" type="image/webp">
+    <img src="assets/img/hero.jpg" width="1920" height="1040" alt="Дед Мороз Михаил с посохом идет по заснеженной стране, в небе — цепочка часов">
+  </picture>
+  <div class="wrap hero-in">
+    <img class="brand" src="assets/img/brand_psb.png" width="92" height="24" alt="ПСБ">
+    <div class="card hero-card">
+      <img class="cap" src="assets/img/cap.png" alt="">
+      <h1 class="h1">Новогодняя ночь длиной в&nbsp;страну</h1>
+      <p class="lead">Дед Мороз Михаил спешит через всю страну навстречу 11&nbsp;полуночам и&nbsp;знакомится с&nbsp;традициями разных краев. Одному не&nbsp;успеть — нужна твоя помощь!</p>
+      <div class="dates">С&nbsp;1&nbsp;декабря по&nbsp;17&nbsp;января</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 2. Переход на платформу и «Как участвовать» ========== -->
+<section class="sec sec-join" id="join">
+  <div class="wrap">
+    <!-- Плашка перехода на платформу: текст, QR, кнопка и ссылка -->
+    <div class="go">
+      <p class="go-t">Наведи камеру телефона на&nbsp;QR-код или нажми на&nbsp;кнопку и&nbsp;переходи на&nbsp;новогоднюю платформу! Проходи задания, зарабатывай баллы и&nbsp;участвуй в&nbsp;розыгрышах призов.</p>
+      <div class="go-act">
+        <img class="qr-img" src="assets/img/qr.png" width="132" height="132" alt="QR-код платформы psbng2027.ru">
+        <div class="go-btn">
+          <a class="btn btn-sm" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a>
+          <a class="url" href="https://psbng2027.ru">psbng2027.ru</a>
+        </div>
+      </div>
+    </div>
+    <!-- Три шага участия -->
+    <h2 class="h2 center">Как участвовать</h2>
+    <ol class="join">
+      <li class="join-step">
+        <picture><source srcset="assets/img/step1.webp" type="image/webp"><img src="assets/img/step1.png" width="210" height="210" alt=""></picture>
+        <span class="num">1</span>
+        <h3>Зайди на&nbsp;платформу и&nbsp;создай героя</h3>
+      </li>
+      <li class="join-step">
+        <picture><source srcset="assets/img/step2.webp" type="image/webp"><img src="assets/img/step2.png" width="210" height="210" alt=""></picture>
+        <span class="num">2</span>
+        <h3>Получи персональный код и&nbsp;введи его на&nbsp;платформе «Ньютон»</h3>
+      </li>
+      <li class="join-step">
+        <picture><source srcset="assets/img/step3.webp" type="image/webp"><img src="assets/img/step3.png" width="210" height="210" alt=""></picture>
+        <span class="num">3</span>
+        <h3>Участвуй в&nbsp;активностях, зарабатывай баллы и&nbsp;участвуй в&nbsp;розыгрыше</h3>
+      </li>
+    </ol>
+    <p class="note">Ссылкой на&nbsp;платформу можно поделиться с&nbsp;близкими и&nbsp;друзьями — играть могут все. А&nbsp;в&nbsp;розыгрышах участвуют только сотрудники ПСБ, которые ввели свой код на&nbsp;«Ньютоне». Один сотрудник может закрепить за&nbsp;собой только один код, поэтому важно его не&nbsp;потерять.</p>
+  </div>
+</section>
+
+<!-- ========== 3. Вводка к активностям ========== -->
+<section class="sec sec-intro" id="story">
+  <div class="wrap">
+    <p class="intro">Михаил спешил доставить подарки по&nbsp;всей стране, но&nbsp;в&nbsp;заснеженной тайге его мешок зацепился за&nbsp;еловую ветку и&nbsp;порвался. Подарки рассыпались по&nbsp;лесу, а&nbsp;впереди еще одиннадцать полуночей — к&nbsp;каждой нужно успеть. Теперь Михаилу нужна твоя помощь!</p>
+  </div>
+</section>
+
+<!-- ========== 4. Спроси дорогу ========== -->
+<section class="sec" id="quiz">
+  <div class="wrap">
+    <div class="act">
+      <picture class="act-img"><source srcset="assets/img/is_quiz.webp" type="image/webp"><img src="assets/img/is_quiz.png" width="616" height="616" alt="Петр у дорожного указателя"></picture>
+      <div class="card act-card">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <h2 class="h2">Спроси дорогу</h2>
+        <p>Сани Михаила с&nbsp;подарками застряли где-то&nbsp;в&nbsp;лесах большой страны. Только местные знают дорогу — помоги Петру расспросить их&nbsp;и&nbsp;узнать, как туда добраться!</p>
+        <p>Угадай, что значат слова разных краев России. Четыре набора по&nbsp;10&nbsp;вопросов, новый набор — каждую неделю.</p>
+        <div class="demo">
+          <button class="btn" id="qmOpen" type="button">Попробуй три вопроса</button>
+        </div>
+        <noscript><p class="nojs">Чтобы открыть демо, включи JavaScript.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. Лес ========== -->
+<section class="sec" id="forest">
+  <div class="wrap">
+    <div class="act act-rev">
+      <div class="act-gif">
+        <picture><source srcset="assets/img/forest_run.webp" type="image/webp"><img src="assets/img/forest_run.gif" width="560" height="240" alt="Борис бежит по ночному лесу, прыгает и собирает подарки"></picture>
+      </div>
+      <div class="card act-card has-ico">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <picture class="ico"><source srcset="assets/img/is_forest.webp" type="image/webp"><img src="assets/img/is_forest.png" width="379" height="376" alt="Борис с подарками на снежной поляне"></picture>
+        <div class="ico-t">
+          <div class="chip">Откроется 8&nbsp;декабря</div>
+          <h2 class="h2">Лес</h2>
+          <p>Место, где рассыпались подарки, найдено! Отправляйся вместе с&nbsp;Борисом в&nbsp;заснеженный лес, преодолевай препятствия и&nbsp;помоги собрать подарки в&nbsp;мешок!</p>
+          <div class="demo"><a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. Елка ========== -->
+<section class="sec" id="elka">
+  <div class="wrap">
+    <div class="act">
+      <picture class="act-img"><source srcset="assets/img/is_elka.webp" type="image/webp"><img src="assets/img/is_elka.png" width="350" height="392" alt="София наряжает елку"></picture>
+      <div class="card act-card">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <div class="chip">Откроется 15&nbsp;декабря</div>
+        <h2 class="h2">Елка</h2>
+        <p>Пока Михаил развозит подарки, София готовит к&nbsp;празднику общую елку ПСБ. Создай для нее волшебную игрушку из&nbsp;любимой фотографии или рисунка!</p>
+        <div class="demo">
+          <button class="btn" id="emOpen" type="button">Подробнее</button>
+        </div>
+        <noscript><p class="nojs">Чтобы открыть подробности, включи JavaScript.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. Живая сказка ========== -->
+<section class="sec" id="serial">
+  <div class="wrap">
+    <div class="act act-rev">
+      <picture class="act-img act-img-wide"><source srcset="assets/img/is_book.webp" type="image/webp"><img src="assets/img/is_book.png" width="696" height="669" alt="Раскрытая книга сказок"></picture>
+      <div class="card act-card">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <h2 class="h2">Живая сказка</h2>
+        <p>За&nbsp;минуту до&nbsp;полуночи часы загадочным образом остановились! Помоги семье Михаила найти потерянную минуту и&nbsp;выбирай, как продолжится сказка в&nbsp;комиксе.</p>
+        <div class="demo read-chap">
+          <button class="btn" id="cmOpen" type="button">Читать главу&nbsp;I</button>
+        </div>
+        <noscript><p class="nojs">Чтобы открыть главу, включи JavaScript.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. Пряничная избушка ========== -->
+<section class="sec" id="izba">
+  <div class="wrap">
+    <div class="act">
+      <picture class="act-img"><source srcset="assets/img/is_izba.webp" type="image/webp"><img src="assets/img/is_izba.png" width="501" height="551" alt="Мария у пряничной избушки"></picture>
+      <div class="card act-card">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <h2 class="h2">Пряничная избушка</h2>
+        <p>В&nbsp;уютной избушке Мария собрала сказки разных народов России. Устраивайся поудобнее, выбирай историю и&nbsp;слушай вместе с&nbsp;близкими!</p>
+        <div class="demo"><a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. Сундук чудес ========== -->
+<section class="sec" id="prizes">
+  <div class="wrap">
+    <div class="act act-rev">
+      <picture class="act-img"><source srcset="assets/img/is_chest.webp" type="image/webp"><img src="assets/img/is_chest.png" width="720" height="633" alt="Сундук чудес"></picture>
+      <div class="card act-card">
+        <img class="cap" src="assets/img/cap.png" alt="">
+        <div class="chip">Розыгрыш 25&nbsp;декабря</div>
+        <h2 class="h2">Сундук чудес</h2>
+        <p>Михаил приготовил подарки не&nbsp;только для жителей страны, но&nbsp;и&nbsp;для своих помощников! Испытай удачу в&nbsp;беспроигрышной лотерее, а&nbsp;если попадешь в&nbsp;топ-100, получишь шанс выиграть один из&nbsp;10&nbsp;дополнительных призов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. Финальный блок ========== -->
+<section class="sec sec-last" id="go">
+  <div class="wrap">
+    <div class="card final">
+      <img class="cap" src="assets/img/cap.png" alt="">
+      <h2 class="h2 center">Больше приключений — на&nbsp;платформе!</h2>
+      <p class="center">Отправляйся в&nbsp;путешествие вместе с&nbsp;Михаилом: проходи испытания, помогай спасать праздник, зарабатывай баллы и&nbsp;участвуй в&nbsp;розыгрышах призов!</p>
+      <p class="center final-hint">Отсканируй QR-код камерой телефона или открой платформу на&nbsp;этом устройстве по&nbsp;ссылке ниже.</p>
+      <div class="final-go">
+        <img class="qr-img" src="assets/img/qr.png" width="132" height="132" alt="QR-код платформы psbng2027.ru">
+        <div>
+          <a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a>
+          <a class="url" href="https://psbng2027.ru">psbng2027.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Окна поверх страницы (открываются кнопками в блоках выше) ===================== -->
+
+<!-- ========== Окно демо квиза «Спроси дорогу» (стили quiz.css, логика quiz.js) ========== -->
+<div class="qm" id="qm" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
+  <div class="qm-scroll" id="qmScroll">
+    <div class="qm-in">
+      <button class="qm-x" id="qmClose" type="button" aria-label="Закрыть демо"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+      <div class="qm-demo">Демо, баллы не&nbsp;начисляются</div>
+      <h2 class="qm-title" id="qmTitle">Север и&nbsp;Урал</h2>
+      <div class="qm-bar" id="qmBar"><span></span><span></span><span></span></div>
+
+      <div class="qm-card" id="qmQ">
+        <img class="qm-cap" src="assets/img/cap.png" alt="">
+        <div class="qm-chip"><span class="sn"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17"/><path d="m9.5 3.8 2.5 2.4 2.5-2.4M9.5 20.2l2.5-2.4 2.5 2.4M3.6 10.3l3.3-1 -.8-3.3M20.4 13.7l-3.3 1 .8 3.3M20.4 10.3l-3.3-1 .8-3.3M3.6 13.7l3.3 1-.8 3.3"/></g></svg></span> Что означает это слово <span class="sn"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17"/><path d="m9.5 3.8 2.5 2.4 2.5-2.4M9.5 20.2l2.5-2.4 2.5 2.4M3.6 10.3l3.3-1 -.8-3.3M20.4 13.7l-3.3 1 .8 3.3M20.4 10.3l-3.3-1 .8-3.3M3.6 13.7l3.3 1-.8 3.3"/></g></svg></span></div>
+        <div class="qm-sign"><span id="qmWord"></span></div>
+        <ul class="qm-opts" id="qmOpts"></ul>
+      </div>
+
+      <div class="qm-card qm-expl" id="qmExpl">
+        <div class="qm-verdict" id="qmVerdict"></div>
+        <div class="qm-right" id="qmRight"></div>
+        <h3 class="qm-ew" id="qmEw"></h3>
+        <p class="qm-where" id="qmWhere"></p>
+        <p class="qm-text" id="qmText"></p>
+        <img class="qm-img" id="qmImg" src="assets/img/quiz1.jpg" alt="">
+      </div>
+      <button class="btn qm-next" id="qmNext" type="button">Следующий вопрос</button>
+
+      <div class="qm-card qm-end" id="qmEnd">
+        <img class="qm-cap" src="assets/img/cap.png" alt="">
+        <h3 class="qm-endt">Путь найден</h3>
+        <p>Это были первые три вопроса набора «Север и&nbsp;Урал». Все 40&nbsp;вопросов и&nbsp;баллы за&nbsp;них&nbsp;— на&nbsp;платформе.</p>
+        <div class="qm-go">
+          <img src="assets/img/qr.png" width="120" height="120" alt="QR-код платформы psbng2027.ru">
+          <div><a href="https://psbng2027.ru">psbng2027.ru</a><span>Наведи камеру телефона</span></div>
+        </div>
+        <div class="qm-endb">
+          <a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a>
+          <button class="link" id="qmAgain" type="button">Пройти еще раз</button>
+          <button class="link" id="qmClose2" type="button">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Окно «Как сделать игрушку» для «Елки» (стили elka.css) ========== -->
+<div class="qm em" id="em" role="dialog" aria-modal="true" aria-labelledby="emTitle">
+  <div class="qm-scroll" id="emScroll">
+    <div class="qm-in">
+      <button class="qm-x" id="emClose" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+      <h2 class="qm-title" id="emTitle">Как сделать игрушку</h2>
+      <ol class="path">
+        <li class="path-step">
+          <div class="path-vis toys">
+            <picture><source srcset="assets/img/toy2_ball.webp" type="image/webp"><img loading="lazy" src="assets/img/toy2_ball.png" width="218" height="360" alt="Синий стеклянный шар с золотыми снежинками"></picture>
+            <picture><source srcset="assets/img/toy2_heart.webp" type="image/webp"><img loading="lazy" src="assets/img/toy2_heart.png" width="225" height="360" alt="Хрустальное сердце"></picture>
+            <picture><source srcset="assets/img/toy2_icicle.webp" type="image/webp"><img loading="lazy" src="assets/img/toy2_icicle.png" width="104" height="360" alt="Сосулька с инеем"></picture>
+          </div>
+          <span class="num">1</span>
+          <h3>Выбери игрушку</h3>
+          <p>Шар, звезда, колокольчик, сосулька, сердце или фонарик&nbsp;— шесть форм на&nbsp;выбор.</p>
+        </li>
+        <li class="path-step">
+          <div class="path-vis">
+            <picture class="polaroid"><source srcset="assets/img/toy2_photo.webp" type="image/webp"><img loading="lazy" src="assets/img/toy2_photo.jpg" width="640" height="640" alt="Семейное фото зимой у деревянного дома"></picture>
+          </div>
+          <span class="num">2</span>
+          <h3>Загрузи картинку</h3>
+          <p>Любимое фото, рисунок ребенка или открытку&nbsp;— любую картинку с&nbsp;новогодним настроением.</p>
+        </li>
+        <li class="path-step">
+          <div class="path-vis glow">
+            <picture><source srcset="assets/img/toy2_result.webp" type="image/webp"><img loading="lazy" src="assets/img/toy2_result.png" width="727" height="840" alt="Готовая елочная игрушка — стеклянный шар, семья с фото перерисована в стиле сказки"></picture>
+          </div>
+          <span class="num">3</span>
+          <h3>Получи игрушку</h3>
+          <p>ИИ&nbsp;перерисует картинку в&nbsp;стиле сказки и&nbsp;превратит в&nbsp;елочную игрушку. Останется повесить ее&nbsp;на&nbsp;общую елку банка&nbsp;— игрушку увидят коллеги со&nbsp;всей страны.</p>
+        </li>
+      </ol>
+      <div class="qm-go">
+        <img src="assets/img/qr.png" width="120" height="120" alt="QR-код платформы psbng2027.ru">
+        <div><a href="https://psbng2027.ru">psbng2027.ru</a><span>Наведи камеру телефона</span></div>
+      </div>
+      <div class="qm-endb">
+        <a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a>
+        <button class="link" id="emClose2" type="button">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Окно с главой I комикса «Живая сказка» (стили comic.css) ========== -->
+<div class="qm cm" id="cm" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+  <div class="qm-scroll" id="cmScroll">
+    <div class="qm-in">
+      <button class="qm-x" id="cmClose" type="button" aria-label="Закрыть главу"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+      <h2 class="qm-title" id="cmTitle">Глава I. Последняя минута</h2>
+      <div class="cm-pages">
+        <picture><source srcset="assets/img/comic_k1.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k1.jpg" width="1536" height="1024" alt="Новогодняя ночь, семья Михаила на праздничной площади. Часы на башне встали без одной минуты двенадцать. Горожане: «До полуночи одна минута…», «Почему часы встали?»"></picture>
+        <picture><source srcset="assets/img/comic_k2.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k2.jpg" width="1536" height="1024" alt="Михаил: «Куда же делась последняя минута?»"></picture>
+        <picture><source srcset="assets/img/comic_k3.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k3.jpg" width="1536" height="1024" alt="Петр: «Смотрите! На снегу серебристые искры…»"></picture>
+        <picture><source srcset="assets/img/comic_k4.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k4.jpg" width="1536" height="1024" alt="Борис расспрашивает горожан: «Вы ничего не видели?» — «Никто ничего не видел.»"></picture>
+        <picture><source srcset="assets/img/comic_k5.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k5.jpg" width="1536" height="1024" alt="Мария: «В одной старинной сказке минута убежала от часов. И вернулась, только когда ее нашли.»"></picture>
+        <picture><source srcset="assets/img/comic_k6.webp" type="image/webp"><img loading="lazy" src="assets/img/comic_k6.jpg" width="1536" height="1024" alt="София: «Значит, и мы найдем!»"></picture>
+      </div>
+      <div class="qm-endb">
+        <a class="btn" href="https://psbng2027.ru">Перейти на&nbsp;платформу</a>
+        <button class="link" id="cmClose2" type="button">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Скрипты: окна поверх страницы, вопросы и логика демо квиза, подключение остальных окон -->
+<script src="assets/js/modal.js"></script>
+<script src="assets/js/quiz-data.js"></script>
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* =====================================================================
+   modal.css — общий каркас окон поверх страницы
+   (демо квиза, глава комикса, «Как сделать игрушку»):
+   фон, прокрутка, крестик, заголовок, блок с QR и кнопками внизу.
+   Окно показывается классом .on (его ставит assets/js/modal.js).
+   ===================================================================== */
+
+.qm{
+  display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:100;
+  background:#050b3a;
+  background:linear-gradient(180deg,rgba(5,11,58,.86) 0%,rgba(3,7,40,.95) 100%),url("../img/hero.jpg") center/cover no-repeat;
+}
+.qm.on{display:block}
+/* Пока окно открыто, страница под ним не прокручивается */
+body.qm-open{overflow:hidden}
+.qm-scroll{position:absolute;left:0;top:0;right:0;bottom:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.qm-in{position:relative;max-width:780px;margin:0 auto;padding:28px 24px 48px;text-align:center}
+
+/* ---------- Крестик (иконка — инлайновый SVG в разметке) ---------- */
+.qm-x{
+  position:fixed;z-index:5;right:16px;top:18px;top:calc(18px + env(safe-area-inset-top,0px));
+  display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);
+  background:#0b1660;color:#fff;font-size:0;line-height:1;cursor:pointer;padding:0;
+}
+.qm-x:hover{border-color:#ffba5b}
+
+/* ---------- Заголовок окна (золотой градиент) ---------- */
+.qm-title{
+  font-family:"Ruslan Display",Georgia,serif;font-weight:400;font-size:36px;line-height:1.1;margin:0 56px 14px;color:#f8b53c;
+  background:linear-gradient(180deg,#feea8f,#f58a10);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* ---------- Низ окна: QR со ссылкой и кнопки ---------- */
+.qm-go{display:inline-flex;align-items:center;gap:14px;text-align:left;background:rgba(255,255,255,.06);border-radius:16px;padding:12px 16px 12px 12px;margin-bottom:18px}
+.qm-go img{width:96px;height:96px;background:#fff;border-radius:10px;padding:5px}
+.qm-go a{display:block;color:#ffd27a;font-size:18px;font-weight:700;text-decoration:none}
+.qm-go a:hover{text-decoration:underline}
+.qm-go span{color:#d2dff9;font-size:14px}
+.qm-endb{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.qm-endb .btn{text-decoration:none}
+
+/* ---------- Телефон ---------- */
+@media (max-width:640px){
+  .qm-in{padding:72px 14px 36px}
+  .qm-title{font-size:26px;margin:0 48px 12px}
+  .qm-x{right:10px;top:calc(14px + env(safe-area-inset-top,0px))}
+}

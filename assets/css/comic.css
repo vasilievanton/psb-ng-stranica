@@ -1,0 +1,14 @@
+/* =====================================================================
+   comic.css — окно «Глава I» комикса «Живая сказка»: кадры друг под другом.
+   ===================================================================== */
+
+.cm .qm-in{max-width:980px;padding-bottom:40px}
+.cm .qm-title{margin:0 56px 6px}
+.cm-pages{margin-top:22px}
+.cm-pages picture{margin:0 0 18px}
+.cm-pages img{width:100%;max-width:760px;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.45)}
+
+@media (max-width:720px){
+  .cm .qm-title{margin:0 48px 6px}
+  .cm-pages img{border-radius:10px}
+}

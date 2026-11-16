@@ -1,5 +1,6 @@
 /* =====================================================================
    base.css — основа страницы: шрифт заголовков, сброс стилей,
+   дизайн-система (переменные: цвета, шрифты, размеры, отступы, скругления, тени),
    типографика и общие элементы (кнопки, ссылки, синяя карточка, плашка, QR).
    Подключается первым, остальные файлы опираются на эти классы.
    ===================================================================== */
@@ -29,73 +30,140 @@
 @font-face{font-family:"PSB Lavr";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/PSBLavr-Medium.woff2") format("woff2"),url("../fonts/PSBLavr-Medium.woff") format("woff")}
 @font-face{font-family:"PSB Lavr";font-style:normal;font-weight:600 800;font-display:swap;src:url("../fonts/PSBLavr-Bold.woff2") format("woff2"),url("../fonts/PSBLavr-Bold.woff") format("woff")}
 
+/* =====================================================================
+   ДИЗАЙН-СИСТЕМА. Все размеры, цвета и скругления на странице берутся отсюда.
+   Остальные файлы используют только эти переменные.
+   ===================================================================== */
+:root{
+  /* --- Цвета --- */
+  --navy:#0b1660;              /* основной текст на светлом, глубокий синий */
+  --navy-2:#14227a;            /* верх градиента синих карточек */
+  --navy-3:#050b3a;            /* фон окон */
+  --ink-2:#33407a;             /* второстепенный текст на светлом */
+  --on-dark:#ffffff;           /* главный текст на синем */
+  --on-dark-2:#d6dcf0;         /* обычный текст на синем */
+  --on-dark-3:#aab3d6;         /* приглушенный текст на синем */
+  --gold:#ffd27a;              /* акцентный текст: заголовки, адрес, даты */
+  --gold-2:#ffba5b;            /* акцентные линии, иконки, наведение */
+  --gold-line:rgba(255,210,122,.45);   /* тонкая золотая обводка */
+  --gold-soft:rgba(255,210,122,.14);   /* золотая подложка */
+  --line-dark:rgba(255,255,255,.2);    /* обводка на синем */
+  --fill-dark:rgba(255,255,255,.08);   /* подложка на синем */
+  --ok:#46d08e; --bad:#ff6b7f;
+  --grad-gold:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
+  --grad-gold-hover:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);
+  --grad-card:linear-gradient(180deg,#14227a 0%,#0b1660 100%);
+  --grad-title:linear-gradient(180deg,#feea8f,#f58a10);
+
+  /* --- Шрифты --- */
+  --font-display:"Ruslan Display",Georgia,"Times New Roman",serif;   /* только заголовки */
+  --font:"PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+  /* --- Шкала размеров текста (десктоп; на телефоне — в конце файла) --- */
+  --fs-h1:46px;      /* заголовок страницы */
+  --fs-h2:36px;      /* заголовок блока и окна */
+  --fs-h3:24px;      /* малый декоративный заголовок (итог квиза, место в пояснении) */
+  --fs-title:20px;   /* заголовок шага */
+  --fs-lead:18px;    /* вводный текст, адрес платформы */
+  --fs-body:16px;    /* основной текст, кнопки */
+  --fs-small:14px;   /* подписи, примечания, плашки */
+  --fs-over:12px;    /* надписи капсом («Демо», «Вопрос 1 из 3») */
+  /* Начертания: 400 — текст, 500 — варианты ответа и акцентный текст, 700 — заголовки шагов, кнопки, ссылки */
+
+  /* --- Отступы: шаг 4 px --- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:40px; --s8:48px; --s9:64px;
+
+  /* --- Скругления --- */
+  --r-lg:24px;       /* карточки, плашки, окна, анимация */
+  --r-md:16px;       /* варианты ответа, блок QR в окне, плавающий QR */
+  --r-sm:12px;       /* картинки и QR-коды внутри */
+  --r-pill:999px;    /* кнопки, плашки-даты, чипы */
+
+  /* --- Тени --- */
+  --sh-card:0 16px 40px rgba(11,22,96,.22);
+  --sh-soft:0 8px 24px rgba(11,22,96,.08);
+  --sh-btn:0 6px 18px rgba(224,154,44,.35);
+  --sh-btn-hover:0 10px 26px rgba(224,154,44,.5);
+
+  --ease:.2s ease;
+}
 
 /* ---------- Сброс и общие настройки ---------- */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  font:16px/1.5 "PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  color:#0b1660;
+  font:400 var(--fs-body)/1.5 var(--font);
+  color:var(--navy);
   background:#dfe8f6;
   background:linear-gradient(180deg,#dfe8f6 0%,#eef3fb 40%,#d9e4f4 100%);
 }
 img{max-width:100%;height:auto;border:0;vertical-align:middle}
 picture{display:block}
 h1,h2,h3{margin:0;font-weight:400}
-p{margin:0 0 12px}
+p{margin:0 0 var(--s3)}
+a,button{-webkit-tap-highlight-color:transparent}
+a,button,[role=button]{cursor:pointer}
+button[disabled]{cursor:default}
 
 /* Контейнер контента по центру */
-.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--s6)}
 .center{text-align:center}
 
 /* ---------- Заголовки ---------- */
-.h1,.h2{font-family:"Ruslan Display",Georgia,"Times New Roman",serif;text-transform:uppercase;letter-spacing:.01em}
-.h1{font-size:46px;line-height:1.1;color:#ffd27a}
-.h2{font-size:36px;line-height:1.15}
+.h1,.h2,.h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
+.h1{font-size:var(--fs-h1);line-height:1.1;color:var(--gold)}
+.h2{font-size:var(--fs-h2);line-height:1.15}
+.h3{font-size:var(--fs-h3);line-height:1.2;color:var(--gold-2)}
+/* Заголовок шага (ПСБ Лавр) */
+.title{font:700 var(--fs-title)/1.3 var(--font);margin:0 0 var(--s2)}
 
 /* ---------- Синяя карточка со снежной шапкой сверху ---------- */
 .card{
-  position:relative;color:#e8ecf7;
-  background:#0b1660;
-  background:linear-gradient(180deg,#14227a 0%,#0b1660 100%);
-  border-radius:20px;
-  box-shadow:0 18px 40px rgba(11,22,96,.25);
+  position:relative;color:var(--on-dark-2);
+  background:var(--navy);background:var(--grad-card);
+  border-radius:var(--r-lg);
+  box-shadow:var(--sh-card);
 }
-.card .h2{color:#ffd27a}
-.card p{color:#d6dcf0}
+.card .h2{color:var(--gold)}
+.card p{color:var(--on-dark-2)}
 /* Снежная шапка (cap.png) лежит поверх верхнего края карточки */
 .cap{position:absolute;left:-10px;top:0;width:calc(100% + 20px);max-width:none;height:auto;transform:translateY(-58%);pointer-events:none}
 
 /* ---------- Кнопки и ссылки ---------- */
 .btn{
-  display:inline-block;border:0;cursor:pointer;
-  font:700 16px/1.2 "PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  padding:14px 34px;border-radius:999px;color:#0b1660;
-  background:#f6c35a;background:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
-  box-shadow:0 6px 18px rgba(224,154,44,.35);
+  display:inline-block;border:0;text-decoration:none;text-align:center;
+  font:700 var(--fs-body)/1.2 var(--font);
+  padding:14px var(--s6);border-radius:var(--r-pill);color:var(--navy);
+  background:#f6c35a;background:var(--grad-gold);
+  box-shadow:var(--sh-btn);
+  transition:transform var(--ease),box-shadow var(--ease),filter var(--ease);
 }
-.btn-sm{padding:12px 24px;font-size:15px}
+.btn:hover{background:var(--grad-gold-hover);box-shadow:var(--sh-btn-hover);transform:translateY(-2px)}
+.btn:active{transform:translateY(0);box-shadow:var(--sh-btn)}
+.btn-sm{padding:12px var(--s5)}
 /* Кнопка, оформленная как ссылка («Закрыть», «Пройти еще раз») */
-.link{border:0;background:none;color:#ffd27a;text-decoration:underline;font:inherit;cursor:pointer;padding:0}
+.link{border:0;background:none;padding:0;font:700 var(--fs-body)/1.5 var(--font);color:var(--gold);text-decoration:underline;text-underline-offset:3px;transition:color var(--ease)}
+.link:hover{color:var(--on-dark)}
 /* Адрес платформы psbng2027.ru */
-.url{color:#ffd27a;font-weight:700;font-size:18px;text-decoration:none}
-.url:hover{text-decoration:underline}
+.url{color:var(--gold);font-weight:700;font-size:var(--fs-lead);text-decoration:none;transition:color var(--ease)}
+.url:hover{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px}
+/* Фокус с клавиатуры — одинаковый у всех кликабельных элементов */
+.btn:focus-visible,.link:focus-visible,.url:focus-visible,.qm-x:focus-visible,.qm-opt:focus-visible,.fqr a:focus-visible,.qm-go a:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
 
-/* ---------- Плашка с датой («Откроется 8 декабря») ---------- */
+/* ---------- Плашки: даты и «Откроется 8 декабря» ---------- */
 .chip{
-  display:inline-block;margin-bottom:12px;padding:5px 14px;border-radius:999px;
-  border:1px solid rgba(255,210,122,.6);color:#ffd27a;font-size:14px;font-weight:600;
+  display:inline-block;margin-bottom:var(--s3);padding:6px var(--s4);border-radius:var(--r-pill);
+  background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold);font-size:var(--fs-small);font-weight:700;line-height:1.3;
 }
 
 /* ---------- QR-код на платформу (готовая картинка assets/img/qr.png) ---------- */
-.qr-img{width:132px;height:132px;border-radius:12px;background:#fff;padding:6px;flex:none}
+.qr-img{width:132px;height:132px;border-radius:var(--r-sm);background:#fff;padding:6px;flex:none}
 
 /* ---------- Сообщение для браузеров без JavaScript ---------- */
-.nojs{color:#ffd27a}
+.nojs{color:var(--gold)}
 
-/* ---------- Телефон ---------- */
+/* ---------- Телефон: уменьшаем шкалу целиком ---------- */
 @media (max-width:640px){
-  .wrap{padding:0 16px}
-  .h1{font-size:34px}
-  .h2{font-size:28px}
+  :root{--fs-h1:34px;--fs-h2:28px;--fs-h3:20px;--fs-title:18px;--fs-lead:17px}
+  .wrap{padding:0 var(--s4)}
 }

@@ -1,3 +1,4 @@
+/* Файл собран из css-src/hero.css скриптом tools/build-css.js — правьте исходник, а не этот файл. */
 /* =====================================================================
    hero.css — первый экран (Михаил с часами, название, даты)
    и плашка перехода на платформу сразу под ним (текст, QR, кнопка, ссылка).
@@ -5,27 +6,28 @@
    ===================================================================== */
 
 /* ---------- Первый экран ---------- */
-.hero{position:relative;max-width:1600px;margin:0 auto;overflow:hidden;border-radius:0 0 var(--r-lg) var(--r-lg);background:#0a1240}
+.hero{position:relative;max-width:1600px;margin:0 auto;overflow:hidden;border-radius:0 0 24px 24px;border-radius:0 0 var(--r-lg) var(--r-lg);background:#0a1240}
 .hero-bg img{position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:62% 12%}
 /* Затемнение снизу, чтобы картинка мягко переходила в плашку */
 .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,rgba(10,18,64,0) 0%,rgba(10,18,64,.75) 100%)}
-.hero-in{position:relative;z-index:2;padding-top:var(--s5);padding-bottom:var(--s9)}
-.brand{display:block;width:104px;height:auto;margin-bottom:var(--s8)}
-.hero-card{max-width:540px;padding:var(--s6) var(--s7);text-align:center}
-.hero-card .h1{margin-bottom:var(--s4)}
-.lead{font-size:var(--fs-lead);line-height:1.5;color:var(--on-dark) !important;margin-bottom:var(--s5)}
+.hero-in{position:relative;z-index:2;padding-top:24px;padding-top:var(--s5);padding-bottom:64px;padding-bottom:var(--s9)}
+.brand{display:block;width:104px;height:auto;margin-bottom:48px;margin-bottom:var(--s8)}
+.hero-card{max-width:540px;padding:32px 40px;padding:var(--s6) var(--s7);text-align:center}
+.hero-card .h1{margin-bottom:16px;margin-bottom:var(--s4)}
+.lead{font-size:18px;font-size:var(--fs-lead);line-height:1.5;color:#ffffff !important;color:var(--on-dark) !important;margin-bottom:24px;margin-bottom:var(--s5)}
 /* Плашка с датами — та же, что .chip, но крупнее */
-.dates{display:inline-block;padding:var(--s2) var(--s5);border-radius:var(--r-pill);background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);font-size:var(--fs-body);font-weight:700;line-height:1.3}
+.dates{display:inline-block;padding:8px 24px;padding:var(--s2) var(--s5);border-radius:999px;border-radius:var(--r-pill);background:rgba(255,210,122,.14);background:var(--accent-soft);border:1px solid rgba(255,210,122,.45);border:1px solid var(--accent-line);color:#ffd27a;color:var(--accent);font-size:16px;font-size:var(--fs-body);font-weight:700;line-height:1.3}
 
 /* ---------- Плашка перехода на платформу ---------- */
 .go{
-  position:relative;z-index:3;display:flex;align-items:center;gap:var(--s7);max-width:980px;margin:-56px auto var(--s9);padding:var(--s5) var(--s6) var(--s5) var(--s7);border-radius:var(--r-lg);
-  background:var(--navy);background:var(--grad-card);border:1px solid var(--accent-line);box-shadow:var(--sh-card);
+  position:relative;z-index:3;display:flex;align-items:center;gap:40px;gap:var(--s7);max-width:980px;margin:-56px auto 64px;margin:-56px auto var(--s9);padding:24px 32px 24px 40px;padding:var(--s5) var(--s6) var(--s5) var(--s7);border-radius:24px;border-radius:var(--r-lg);
+  background:#0b1660;
+  background:var(--navy);background:linear-gradient(180deg,#14227a 0%,#0b1660 100%);background:var(--grad-card);border:1px solid rgba(255,210,122,.45);border:1px solid var(--accent-line);box-shadow:0 16px 40px rgba(11,22,96,.22);box-shadow:var(--sh-card);
 }
-.go-t{flex:1;margin:0;color:var(--on-dark) !important;font-weight:500;font-size:var(--fs-lead);line-height:1.5}
-.go-act{flex:none;display:flex;align-items:center;gap:var(--s5)}
+.go-t{flex:1;margin:0;color:#ffffff !important;color:var(--on-dark) !important;font-weight:500;font-size:18px;font-size:var(--fs-lead);line-height:1.5}
+.go-act{flex:none;display:flex;align-items:center;gap:24px;gap:var(--s5)}
 .go-btn .btn{display:block;white-space:nowrap}
-.go-btn .url{display:block;margin-top:var(--s3);text-align:center}
+.go-btn .url{display:block;margin-top:12px;margin-top:var(--s3);text-align:center}
 
 /* ---------- Десктоп: картинка целиком по высоте, прижата вправо, слева уходит в синий ---------- */
 @media (min-width:1001px){
@@ -33,7 +35,7 @@
   .hero-bg img{left:auto;right:0;width:auto;height:100%;object-fit:contain;
     -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
   .hero:after{display:none}
-  .go{margin-top:var(--s6)}
+  .go{margin-top:32px;margin-top:var(--s6)}
 }
 
 /* ---------- Планшет ---------- */
@@ -44,16 +46,16 @@
   .hero-bg img{opacity:.8}
 }
 @media (max-width:900px){
-  .go{flex-direction:column;gap:var(--s5);text-align:center;max-width:560px;padding:var(--s5);margin-bottom:var(--s8)}
+  .go{flex-direction:column;gap:24px;gap:var(--s5);text-align:center;max-width:560px;padding:24px;padding:var(--s5);margin-bottom:48px;margin-bottom:var(--s8)}
 }
 
 /* ---------- Телефон ---------- */
 @media (max-width:640px){
-  .hero-in{padding-bottom:var(--s9)}
+  .hero-in{padding-bottom:64px;padding-bottom:var(--s9)}
   .hero-bg img{object-position:72% 20%;opacity:.75}
-  .brand{margin:0 auto var(--s8)}
-  .hero-card{padding:var(--s6) var(--s5) var(--s5)}
-  .go{margin-top:-36px;padding:var(--s5) var(--s4)}
-  .go-t{font-size:var(--fs-body)}
-  .go-act{flex-direction:column;gap:var(--s4)}
+  .brand{margin:0 auto 48px;margin:0 auto var(--s8)}
+  .hero-card{padding:32px 24px 24px;padding:var(--s6) var(--s5) var(--s5)}
+  .go{margin-top:-36px;padding:24px 16px;padding:var(--s5) var(--s4)}
+  .go-t{font-size:16px;font-size:var(--fs-body)}
+  .go-act{flex-direction:column;gap:16px;gap:var(--s4)}
 }

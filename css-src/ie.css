@@ -1,0 +1,30 @@
+/* =====================================================================
+   ie.css — поправки только для Internet Explorer 10–11.
+   IE не понимает gap у flex-контейнеров, поэтому промежутки между
+   элементами здесь задаются отступами. Остальные браузеры этот блок
+   не читают (условие -ms-high-contrast есть только в IE).
+   Значения повторяют шкалу отступов из base.css.
+   ===================================================================== */
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){
+  /* Плашка перехода и финальный блок */
+  .go > * + *{margin-left:40px}
+  .go-act > * + *,.final-go > * + *{margin-left:24px}
+  /* Как участвовать */
+  .join-step + .join-step{margin-left:24px}
+  /* Блоки активностей: картинка и карточка */
+  .act > * + *{margin-left:40px}
+  .act-rev > * + *{margin-left:0;margin-right:40px}
+  .has-ico > * + *{margin-left:24px}
+  .demo > * + *{margin-left:16px}
+  /* Окна */
+  .qm-go > * + *{margin-left:16px}
+  .qm-endb > * + *{margin-left:24px}
+  .qm-bar span + span{margin-left:8px}
+  .qm-opts{margin:-6px}
+  .qm-opts li{margin:6px}
+  .qm-opt .ic{margin-right:12px}
+  .path-step + .path-step{margin-left:64px}
+  .path-vis picture + picture{margin-left:12px}
+  /* Заголовок окна: градиентный текст IE не умеет — показываем сплошным цветом */
+  .qm-title{background:none}
+}

@@ -15,12 +15,12 @@
 .hero-card .h1{margin-bottom:var(--s4)}
 .lead{font-size:var(--fs-lead);line-height:1.5;color:var(--on-dark) !important;margin-bottom:var(--s5)}
 /* Плашка с датами — та же, что .chip, но крупнее */
-.dates{display:inline-block;padding:var(--s2) var(--s5);border-radius:var(--r-pill);background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold);font-size:var(--fs-body);font-weight:700;line-height:1.3}
+.dates{display:inline-block;padding:var(--s2) var(--s5);border-radius:var(--r-pill);background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);font-size:var(--fs-body);font-weight:700;line-height:1.3}
 
 /* ---------- Плашка перехода на платформу ---------- */
 .go{
   position:relative;z-index:3;display:flex;align-items:center;gap:var(--s7);max-width:980px;margin:-56px auto var(--s9);padding:var(--s5) var(--s6) var(--s5) var(--s7);border-radius:var(--r-lg);
-  background:var(--navy);background:var(--grad-card);border:1px solid var(--gold-line);box-shadow:var(--sh-card);
+  background:var(--navy);background:var(--grad-card);border:1px solid var(--accent-line);box-shadow:var(--sh-card);
 }
 .go-t{flex:1;margin:0;color:var(--on-dark) !important;font-weight:500;font-size:var(--fs-lead);line-height:1.5}
 .go-act{flex:none;display:flex;align-items:center;gap:var(--s5)}

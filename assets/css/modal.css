@@ -25,7 +25,7 @@ body.qm-open{overflow:hidden}
   background:var(--navy);color:var(--on-dark);font-size:0;line-height:1;padding:0;
   transition:border-color var(--ease),color var(--ease),background var(--ease),transform var(--ease);
 }
-.qm-x:hover{border-color:var(--gold-2);color:var(--gold-2);background:var(--navy-2);transform:rotate(90deg)}
+.qm-x:hover{border-color:var(--accent-2);color:var(--accent-2);background:var(--navy-2);transform:rotate(90deg)}
 
 /* ---------- Заголовок окна (золотой градиент), размер как у заголовка блока ---------- */
 .qm-title{
@@ -36,7 +36,7 @@ body.qm-open{overflow:hidden}
 /* ---------- Низ окна: QR со ссылкой и кнопки ---------- */
 .qm-go{display:inline-flex;align-items:center;gap:var(--s4);text-align:left;background:var(--fill-dark);border-radius:var(--r-md);padding:var(--s3) var(--s4) var(--s3) var(--s3);margin-bottom:var(--s5)}
 .qm-go img{width:96px;height:96px;background:#fff;border-radius:var(--r-sm);padding:var(--s1)}
-.qm-go a{display:block;color:var(--gold);font-size:var(--fs-lead);font-weight:700;text-decoration:none;transition:color var(--ease)}
+.qm-go a{display:block;color:var(--accent);font-size:var(--fs-lead);font-weight:700;text-decoration:none;transition:color var(--ease)}
 .qm-go a:hover{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px}
 .qm-go span{color:var(--on-dark-2);font-size:var(--fs-small)}
 .qm-endb{display:flex;align-items:center;justify-content:center;gap:var(--s5);flex-wrap:wrap}

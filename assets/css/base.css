@@ -43,15 +43,15 @@
   --on-dark:#ffffff;           /* главный текст на синем */
   --on-dark-2:#d6dcf0;         /* обычный текст на синем */
   --on-dark-3:#aab3d6;         /* приглушенный текст на синем */
-  --gold:#ffd27a;              /* акцентный текст: заголовки, адрес, даты */
-  --gold-2:#ffba5b;            /* акцентные линии, иконки, наведение */
-  --gold-line:rgba(255,210,122,.45);   /* тонкая золотая обводка */
-  --gold-soft:rgba(255,210,122,.14);   /* золотая подложка */
+  --accent:#ffd27a;              /* акцентный текст: заголовки, адрес, даты */
+  --accent-2:#ffba5b;            /* акцентные линии, иконки, наведение */
+  --accent-line:rgba(255,210,122,.45);   /* тонкая золотая обводка */
+  --accent-soft:rgba(255,210,122,.14);   /* золотая подложка */
   --line-dark:rgba(255,255,255,.2);    /* обводка на синем */
   --fill-dark:rgba(255,255,255,.08);   /* подложка на синем */
   --ok:#46d08e; --bad:#ff6b7f;
-  --grad-gold:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
-  --grad-gold-hover:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);
+  --grad-accent:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
+  --grad-accent-hover:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);
   --grad-card:linear-gradient(180deg,#14227a 0%,#0b1660 100%);
   --grad-title:linear-gradient(180deg,#feea8f,#f58a10);
 
@@ -111,9 +111,9 @@ button[disabled]{cursor:default}
 
 /* ---------- Заголовки ---------- */
 .h1,.h2,.h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
-.h1{font-size:var(--fs-h1);line-height:1.1;color:var(--gold)}
+.h1{font-size:var(--fs-h1);line-height:1.1;color:var(--accent)}
 .h2{font-size:var(--fs-h2);line-height:1.15}
-.h3{font-size:var(--fs-h3);line-height:1.2;color:var(--gold-2)}
+.h3{font-size:var(--fs-h3);line-height:1.2;color:var(--accent-2)}
 /* Заголовок шага (ПСБ Лавр) */
 .title{font:700 var(--fs-title)/1.3 var(--font);margin:0 0 var(--s2)}
 
@@ -124,7 +124,7 @@ button[disabled]{cursor:default}
   border-radius:var(--r-lg);
   box-shadow:var(--sh-card);
 }
-.card .h2{color:var(--gold)}
+.card .h2{color:var(--accent)}
 .card p{color:var(--on-dark-2)}
 /* Снежная шапка (cap.png) лежит поверх верхнего края карточки */
 .cap{position:absolute;left:-10px;top:0;width:calc(100% + 20px);max-width:none;height:auto;transform:translateY(-58%);pointer-events:none}
@@ -134,33 +134,33 @@ button[disabled]{cursor:default}
   display:inline-block;border:0;text-decoration:none;text-align:center;
   font:700 var(--fs-body)/1.2 var(--font);
   padding:14px var(--s6);border-radius:var(--r-pill);color:var(--navy);
-  background:#f6c35a;background:var(--grad-gold);
+  background:#f6c35a;background:var(--grad-accent);
   box-shadow:var(--sh-btn);
   transition:transform var(--ease),box-shadow var(--ease),filter var(--ease);
 }
-.btn:hover{background:var(--grad-gold-hover);box-shadow:var(--sh-btn-hover);transform:translateY(-2px)}
+.btn:hover{background:var(--grad-accent-hover);box-shadow:var(--sh-btn-hover);transform:translateY(-2px)}
 .btn:active{transform:translateY(0);box-shadow:var(--sh-btn)}
 .btn-sm{padding:12px var(--s5)}
 /* Кнопка, оформленная как ссылка («Закрыть», «Пройти еще раз») */
-.link{border:0;background:none;padding:0;font:700 var(--fs-body)/1.5 var(--font);color:var(--gold);text-decoration:underline;text-underline-offset:3px;transition:color var(--ease)}
+.link{border:0;background:none;padding:0;font:700 var(--fs-body)/1.5 var(--font);color:var(--accent);text-decoration:underline;text-underline-offset:3px;transition:color var(--ease)}
 .link:hover{color:var(--on-dark)}
 /* Адрес платформы psbng2027.ru */
-.url{color:var(--gold);font-weight:700;font-size:var(--fs-lead);text-decoration:none;transition:color var(--ease)}
+.url{color:var(--accent);font-weight:700;font-size:var(--fs-lead);text-decoration:none;transition:color var(--ease)}
 .url:hover{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px}
 /* Фокус с клавиатуры — одинаковый у всех кликабельных элементов */
-.btn:focus-visible,.link:focus-visible,.url:focus-visible,.qm-x:focus-visible,.qm-opt:focus-visible,.fqr a:focus-visible,.qm-go a:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+.btn:focus-visible,.link:focus-visible,.url:focus-visible,.qm-x:focus-visible,.qm-opt:focus-visible,.fqr a:focus-visible,.qm-go a:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
 
 /* ---------- Плашки: даты и «Откроется 8 декабря» ---------- */
 .chip{
   display:inline-block;margin-bottom:var(--s3);padding:6px var(--s4);border-radius:var(--r-pill);
-  background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold);font-size:var(--fs-small);font-weight:700;line-height:1.3;
+  background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);font-size:var(--fs-small);font-weight:700;line-height:1.3;
 }
 
 /* ---------- QR-код на платформу (готовая картинка assets/img/qr.png) ---------- */
 .qr-img{width:132px;height:132px;border-radius:var(--r-sm);background:#fff;padding:6px;flex:none}
 
 /* ---------- Сообщение для браузеров без JavaScript ---------- */
-.nojs{color:var(--gold)}
+.nojs{color:var(--accent)}
 
 /* ---------- Телефон: уменьшаем шкалу целиком ---------- */
 @media (max-width:640px){

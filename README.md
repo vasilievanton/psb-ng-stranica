@@ -29,7 +29,7 @@ assets/
     quiz.js              логика демо квиза
     main.js              подключение окон комикса и «Елки», плавающий QR
   img/                   картинки (см. ниже)
-  fonts/                 Ruslan Display и его лицензия
+  fonts/                 Ruslan Display и его лицензия, ПСБ Лавр
 ```
 
 Стили и скрипты подключаются в `index.html` именно в этом порядке: сначала `base.css`, затем блоки, затем окна; `modal.js` раньше `quiz-data.js` и `quiz.js`.
@@ -84,6 +84,6 @@ assets/
 
 ## Шрифты
 
-Заголовки набраны шрифтом Ruslan Display (лицензия SIL Open Font License 1.1, файл `assets/fonts/OFL-RuslanDisplay.txt`). Основной текст набран системным шрифтом.
+Заголовки набраны шрифтом Ruslan Display (лицензия SIL Open Font License 1.1, файл `assets/fonts/OFL-RuslanDisplay.txt`). Основной текст, кнопки и подписи набраны фирменным шрифтом банка ПСБ Лавр (файлы `assets/fonts/PSBLavr-*.woff2` и `.woff`: Regular, Italic, Medium, Bold).
 
 Кириллический файл шрифта встроен прямо в `assets/css/base.css` строкой base64, чтобы заголовки при загрузке страницы сразу рисовались нужным шрифтом, без подмены. Файлы в `assets/fonts` остаются запасными. Чтобы заменить шрифт, перекодируйте новый `.woff2` в base64 и вставьте строку в `base.css` вместо текущей.

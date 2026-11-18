@@ -27,9 +27,9 @@ body.qm-open{overflow:hidden}
 }
 .qm-x:hover{border-color:var(--accent-2);color:var(--accent-2);background:var(--navy-2);transform:rotate(90deg)}
 
-/* ---------- Заголовок окна (золотой градиент), размер как у заголовка блока ---------- */
+/* ---------- Заголовок окна (серебряный градиент), размер как у заголовка блока ---------- */
 .qm-title{
-  font-family:var(--font-display);font-weight:400;font-size:var(--fs-h2);line-height:1.15;text-transform:uppercase;letter-spacing:.01em;margin:0 56px var(--s4);color:#f8b53c;
+  font-family:var(--font-display);font-weight:400;font-size:var(--fs-h2);line-height:1.15;text-transform:uppercase;letter-spacing:.01em;margin:0 56px var(--s4);color:#c3cad5;
   background:var(--grad-title);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
 

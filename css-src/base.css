@@ -43,17 +43,17 @@
   --on-dark:#ffffff;           /* главный текст на синем */
   --on-dark-2:#d6dcf0;         /* обычный текст на синем */
   --on-dark-3:#aab3d6;         /* приглушенный текст на синем */
-  --accent:#ffd27a;              /* акцентный текст: заголовки, адрес, даты */
-  --accent-2:#ffba5b;            /* акцентные линии, иконки, наведение */
-  --accent-line:rgba(255,210,122,.45);   /* тонкая золотая обводка */
-  --accent-soft:rgba(255,210,122,.14);   /* золотая подложка */
+  --accent:#e3e8ef;              /* акцентный текст: заголовки, адрес, даты */
+  --accent-2:#cdd4de;            /* акцентные линии, иконки, наведение */
+  --accent-line:rgba(227,232,239,.45);   /* тонкая серебряная обводка */
+  --accent-soft:rgba(227,232,239,.14);   /* серебряная подложка */
   --line-dark:rgba(255,255,255,.2);    /* обводка на синем */
   --fill-dark:rgba(255,255,255,.08);   /* подложка на синем */
   --ok:#46d08e; --bad:#ff6b7f;
-  --grad-accent:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
-  --grad-accent-hover:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);
+  --grad-accent:linear-gradient(180deg,#f5f7fa 0%,#c3cad5 45%,#8e98a7 100%);
+  --grad-accent-hover:linear-gradient(180deg,#ffffff 0%,#e3e8ef 45%,#a9b2bf 100%);
   --grad-card:linear-gradient(180deg,#14227a 0%,#0b1660 100%);
-  --grad-title:linear-gradient(180deg,#feea8f,#f58a10);
+  --grad-title:linear-gradient(180deg,#f5f7fa,#9aa4b3);
 
   /* --- Шрифты --- */
   --font-display:"Ruslan Display",Georgia,"Times New Roman",serif;   /* только заголовки */
@@ -82,8 +82,8 @@
   /* --- Тени --- */
   --sh-card:0 16px 40px rgba(11,22,96,.22);
   --sh-soft:0 8px 24px rgba(11,22,96,.08);
-  --sh-btn:0 6px 18px rgba(224,154,44,.35);
-  --sh-btn-hover:0 10px 26px rgba(224,154,44,.5);
+  --sh-btn:0 6px 18px rgba(142,152,167,.35);
+  --sh-btn-hover:0 10px 26px rgba(142,152,167,.5);
 
   --ease:.2s ease;
 }
@@ -134,7 +134,7 @@ button[disabled]{cursor:default}
   display:inline-block;border:0;text-decoration:none;text-align:center;
   font:700 var(--fs-body)/1.2 var(--font);
   padding:14px var(--s6);border-radius:var(--r-pill);color:var(--navy);
-  background:#f6c35a;background:var(--grad-accent);
+  background:#c3cad5;background:var(--grad-accent);
   box-shadow:var(--sh-btn);
   transition:transform var(--ease),box-shadow var(--ease),filter var(--ease);
 }

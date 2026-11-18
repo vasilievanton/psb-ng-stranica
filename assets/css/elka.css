@@ -14,7 +14,7 @@
 /* Стрелка между шагами (на десктопе вправо, на планшете и телефоне вниз) */
 .path-step + .path-step:before{
   content:"";position:absolute;left:-48px;top:118px;width:32px;height:14px;   /* по центру промежутка 64px */
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='14'%3E%3Cpath d='M2 7h24M20 2l6 5-6 5' fill='none' stroke='%23ffba5b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='14'%3E%3Cpath d='M2 7h24M20 2l6 5-6 5' fill='none' stroke='%23cdd4de' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
 }
 /* Картинка шага на мягком светлом пятне */
 .path-vis{

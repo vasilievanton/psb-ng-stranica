@@ -44,17 +44,17 @@
   --on-dark:#ffffff;           /* главный текст на синем */
   --on-dark-2:#d6dcf0;         /* обычный текст на синем */
   --on-dark-3:#aab3d6;         /* приглушенный текст на синем */
-  --accent:#ffd27a;              /* акцентный текст: заголовки, адрес, даты */
-  --accent-2:#ffba5b;            /* акцентные линии, иконки, наведение */
-  --accent-line:rgba(255,210,122,.45);   /* тонкая золотая обводка */
-  --accent-soft:rgba(255,210,122,.14);   /* золотая подложка */
+  --accent:#e3e8ef;              /* акцентный текст: заголовки, адрес, даты */
+  --accent-2:#cdd4de;            /* акцентные линии, иконки, наведение */
+  --accent-line:rgba(227,232,239,.45);   /* тонкая серебряная обводка */
+  --accent-soft:rgba(227,232,239,.14);   /* серебряная подложка */
   --line-dark:rgba(255,255,255,.2);    /* обводка на синем */
   --fill-dark:rgba(255,255,255,.08);   /* подложка на синем */
   --ok:#46d08e; --bad:#ff6b7f;
-  --grad-accent:linear-gradient(180deg,#ffe39a 0%,#f6c35a 45%,#e09a2c 100%);
-  --grad-accent-hover:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);
+  --grad-accent:linear-gradient(180deg,#f5f7fa 0%,#c3cad5 45%,#8e98a7 100%);
+  --grad-accent-hover:linear-gradient(180deg,#ffffff 0%,#e3e8ef 45%,#a9b2bf 100%);
   --grad-card:linear-gradient(180deg,#14227a 0%,#0b1660 100%);
-  --grad-title:linear-gradient(180deg,#feea8f,#f58a10);
+  --grad-title:linear-gradient(180deg,#f5f7fa,#9aa4b3);
 
   /* --- Шрифты --- */
   --font-display:"Ruslan Display",Georgia,"Times New Roman",serif;   /* только заголовки */
@@ -83,8 +83,8 @@
   /* --- Тени --- */
   --sh-card:0 16px 40px rgba(11,22,96,.22);
   --sh-soft:0 8px 24px rgba(11,22,96,.08);
-  --sh-btn:0 6px 18px rgba(224,154,44,.35);
-  --sh-btn-hover:0 10px 26px rgba(224,154,44,.5);
+  --sh-btn:0 6px 18px rgba(142,152,167,.35);
+  --sh-btn-hover:0 10px 26px rgba(142,152,167,.5);
 
   --ease:.2s ease;
 }
@@ -114,9 +114,9 @@ button[disabled]{cursor:default}
 
 /* ---------- Заголовки ---------- */
 .h1,.h2,.h3{font-family:"Ruslan Display",Georgia,"Times New Roman",serif;font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
-.h1{font-size:46px;font-size:var(--fs-h1);line-height:1.1;color:#ffd27a;color:var(--accent)}
+.h1{font-size:46px;font-size:var(--fs-h1);line-height:1.1;color:#e3e8ef;color:var(--accent)}
 .h2{font-size:36px;font-size:var(--fs-h2);line-height:1.15}
-.h3{font-size:24px;font-size:var(--fs-h3);line-height:1.2;color:#ffba5b;color:var(--accent-2)}
+.h3{font-size:24px;font-size:var(--fs-h3);line-height:1.2;color:#cdd4de;color:var(--accent-2)}
 /* Заголовок шага (ПСБ Лавр) */
 .title{font:700 20px/1.3 "PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font:700 var(--fs-title)/1.3 var(--font);margin:0 0 8px;margin:0 0 var(--s2)}
 
@@ -130,7 +130,7 @@ button[disabled]{cursor:default}
   box-shadow:0 16px 40px rgba(11,22,96,.22);
   box-shadow:var(--sh-card);
 }
-.card .h2{color:#ffd27a;color:var(--accent)}
+.card .h2{color:#e3e8ef;color:var(--accent)}
 .card p{color:#d6dcf0;color:var(--on-dark-2)}
 /* Снежная шапка (cap.png) лежит поверх верхнего края карточки */
 .cap{position:absolute;left:-10px;top:0;width:calc(100% + 20px);max-width:none;height:auto;transform:translateY(-58%);pointer-events:none}
@@ -142,36 +142,36 @@ button[disabled]{cursor:default}
   font:700 var(--fs-body)/1.2 var(--font);
   padding:14px 32px;
   padding:14px var(--s6);border-radius:999px;border-radius:var(--r-pill);color:#0b1660;color:var(--navy);
-  background:#f6c35a;background:var(--grad-accent);
-  box-shadow:0 6px 18px rgba(224,154,44,.35);
+  background:#c3cad5;background:var(--grad-accent);
+  box-shadow:0 6px 18px rgba(142,152,167,.35);
   box-shadow:var(--sh-btn);
   transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
   transition:transform var(--ease),box-shadow var(--ease),filter var(--ease);
 }
-.btn:hover{background:linear-gradient(180deg,#fff0c2 0%,#ffd27a 45%,#f0ac3e 100%);background:var(--grad-accent-hover);box-shadow:0 10px 26px rgba(224,154,44,.5);box-shadow:var(--sh-btn-hover);transform:translateY(-2px)}
-.btn:active{transform:translateY(0);box-shadow:0 6px 18px rgba(224,154,44,.35);box-shadow:var(--sh-btn)}
+.btn:hover{background:linear-gradient(180deg,#ffffff 0%,#e3e8ef 45%,#a9b2bf 100%);background:var(--grad-accent-hover);box-shadow:0 10px 26px rgba(142,152,167,.5);box-shadow:var(--sh-btn-hover);transform:translateY(-2px)}
+.btn:active{transform:translateY(0);box-shadow:0 6px 18px rgba(142,152,167,.35);box-shadow:var(--sh-btn)}
 .btn-sm{padding:12px 24px;padding:12px var(--s5)}
 /* Кнопка, оформленная как ссылка («Закрыть», «Пройти еще раз») */
-.link{border:0;background:none;padding:0;font:700 16px/1.5 "PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font:700 var(--fs-body)/1.5 var(--font);color:#ffd27a;color:var(--accent);text-decoration:underline;text-underline-offset:3px;transition:color .2s ease;transition:color var(--ease)}
+.link{border:0;background:none;padding:0;font:700 16px/1.5 "PSB Lavr",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font:700 var(--fs-body)/1.5 var(--font);color:#e3e8ef;color:var(--accent);text-decoration:underline;text-underline-offset:3px;transition:color .2s ease;transition:color var(--ease)}
 .link:hover{color:#ffffff;color:var(--on-dark)}
 /* Адрес платформы psbng2027.ru */
-.url{color:#ffd27a;color:var(--accent);font-weight:700;font-size:18px;font-size:var(--fs-lead);text-decoration:none;transition:color .2s ease;transition:color var(--ease)}
+.url{color:#e3e8ef;color:var(--accent);font-weight:700;font-size:18px;font-size:var(--fs-lead);text-decoration:none;transition:color .2s ease;transition:color var(--ease)}
 .url:hover{color:#ffffff;color:var(--on-dark);text-decoration:underline;text-underline-offset:3px}
 /* Фокус с клавиатуры — одинаковый у всех кликабельных элементов */
-.btn:focus-visible,.link:focus-visible,.url:focus-visible,.qm-x:focus-visible,.qm-opt:focus-visible,.fqr a:focus-visible,.qm-go a:focus-visible{outline:2px solid #ffba5b;outline:2px solid var(--accent-2);outline-offset:3px}
+.btn:focus-visible,.link:focus-visible,.url:focus-visible,.qm-x:focus-visible,.qm-opt:focus-visible,.fqr a:focus-visible,.qm-go a:focus-visible{outline:2px solid #cdd4de;outline:2px solid var(--accent-2);outline-offset:3px}
 
 /* ---------- Плашки: даты и «Откроется 8 декабря» ---------- */
 .chip{
   display:inline-block;margin-bottom:12px;margin-bottom:var(--s3);padding:6px 16px;padding:6px var(--s4);border-radius:999px;border-radius:var(--r-pill);
-  background:rgba(255,210,122,.14);
-  background:var(--accent-soft);border:1px solid rgba(255,210,122,.45);border:1px solid var(--accent-line);color:#ffd27a;color:var(--accent);font-size:14px;font-size:var(--fs-small);font-weight:700;line-height:1.3;
+  background:rgba(227,232,239,.14);
+  background:var(--accent-soft);border:1px solid rgba(227,232,239,.45);border:1px solid var(--accent-line);color:#e3e8ef;color:var(--accent);font-size:14px;font-size:var(--fs-small);font-weight:700;line-height:1.3;
 }
 
 /* ---------- QR-код на платформу (готовая картинка assets/img/qr.png) ---------- */
 .qr-img{width:132px;height:132px;border-radius:12px;border-radius:var(--r-sm);background:#fff;padding:6px;flex:none}
 
 /* ---------- Сообщение для браузеров без JavaScript ---------- */
-.nojs{color:#ffd27a;color:var(--accent)}
+.nojs{color:#e3e8ef;color:var(--accent)}
 
 /* ---------- Телефон: уменьшаем шкалу целиком ---------- */
 @media (max-width:640px){
